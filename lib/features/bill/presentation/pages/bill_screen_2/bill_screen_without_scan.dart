@@ -511,7 +511,7 @@ class _BillScreenWithOutScanState extends State<BillScreenWithOutScan> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       Text(
-                        'ДАЛЕЕ',
+                        'ДАЛЕЕ ',
                         style: TextStyle(fontSize: 32),
                       ),
                       SizedBox(
