@@ -519,7 +519,8 @@ class _BillScreenState extends State<BillScreen> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                           backgroundColor: const Color(0xff0038FF),
                         ),
                         onPressed: () {
@@ -549,6 +550,8 @@ class _BillScreenState extends State<BillScreen> {
       ),
     );
   }
+
+  /// process Image это и есть text recognizer он способен распознать кириллицу
 
   void processImage() async {
     _recognizedText =
