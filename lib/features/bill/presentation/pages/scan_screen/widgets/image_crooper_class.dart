@@ -15,7 +15,7 @@ Future<String> imageCropperView(String? path, BuildContext context) async {
     ],
     uiSettings: [
       AndroidUiSettings(
-          toolbarTitle: 'Вырезать нужный обасть картины ',
+          toolbarTitle: 'Crop Image',
           toolbarColor: Colors.grey,
           toolbarWidgetColor: Colors.black,
           initAspectRatio: CropAspectRatioPreset.original,

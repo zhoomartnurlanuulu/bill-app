@@ -5,8 +5,7 @@ import 'package:billapp/configs/routers/router.gr.dart';
 import 'package:billapp/features/bill/presentation/pages/bill_screen/widgets/drop_down_widget.dart';
 import 'package:billapp/features/bill/presentation/pages/bill_screen/widgets/global_pisha.dart';
 import 'package:flutter/material.dart';
-import 'package:google_ml_kit/google_ml_kit.dart';
-import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
+import 'package:flutter_tesseract_ocr/android_ios.dart';
 
 class BillScreen extends StatefulWidget {
   BillScreen({super.key, required this.path});
@@ -16,7 +15,6 @@ class BillScreen extends StatefulWidget {
 }
 
 class _BillScreenState extends State<BillScreen> {
-  late final InputImage inputImage;
   bool isBusy = true;
   bool isGeneral = true;
   bool isGeneral1 = true;
@@ -39,12 +37,13 @@ class _BillScreenState extends State<BillScreen> {
   final TextEditingController priceController4 = TextEditingController();
   final TextEditingController priceController5 = TextEditingController();
   final TextEditingController priceController6 = TextEditingController();
+  String _recognizedText = '';
 
   @override
   void initState() {
     super.initState();
-    inputImage = InputImage.fromFilePath(widget.path);
-    processImage(inputImage);
+
+    processImage();
   }
 
   @override
@@ -552,27 +551,23 @@ class _BillScreenState extends State<BillScreen> {
     );
   }
 
-  void processImage(InputImage image) async {
-    final textRecognizer = TextRecognizer(
-      script: TextRecognitionScript.latin,
-    );
-    final RecognizedText recognizedText =
-        await textRecognizer.processImage(image);
-    await textRecognizer.close();
-    controller.text = recognizedText.text;
-    controller1.text = recognizedText.text;
-    controller2.text = recognizedText.text;
-    controller3.text = recognizedText.text;
-    controller4.text = recognizedText.text;
-    controller5.text = recognizedText.text;
-    controller6.text = recognizedText.text;
-    priceController.text = recognizedText.text;
-    priceController1.text = recognizedText.text;
-    priceController2.text = recognizedText.text;
-    priceController3.text = recognizedText.text;
-    priceController4.text = recognizedText.text;
-    priceController5.text = recognizedText.text;
-    priceController6.text = recognizedText.text;
+  void processImage() async {
+    _recognizedText =
+        await FlutterTesseractOcr.extractText(widget.path, language: 'rus');
+    controller.text = _recognizedText;
+    controller1.text = _recognizedText;
+    controller2.text = _recognizedText;
+    controller3.text = _recognizedText;
+    controller4.text = _recognizedText;
+    controller5.text = _recognizedText;
+    controller6.text = _recognizedText;
+    priceController.text = _recognizedText;
+    priceController1.text = _recognizedText;
+    priceController2.text = _recognizedText;
+    priceController3.text = _recognizedText;
+    priceController4.text = _recognizedText;
+    priceController5.text = _recognizedText;
+    priceController6.text = _recognizedText;
 
     setState(() {
       isBusy = true;

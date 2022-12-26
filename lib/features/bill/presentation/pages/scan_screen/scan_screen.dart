@@ -63,7 +63,7 @@ class _ScanScreenState extends State<ScanScreen> {
                 context.router.push(const BillScreenWithOutScanRoute());
               },
             ),
-          ),
+          )
         ],
       ),
     );
