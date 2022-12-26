@@ -508,7 +508,6 @@ class _BillScreenState extends State<BillScreen> {
                                 color: Colors.grey[200],
                                 borderRadius: BorderRadius.circular(6),
                               ),
-                              child: const Text(''),
                             ),
                           ],
                         )

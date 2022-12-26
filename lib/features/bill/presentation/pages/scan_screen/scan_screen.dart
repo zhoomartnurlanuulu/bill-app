@@ -39,7 +39,9 @@ class _ScanScreenState extends State<ScanScreen> {
                   pickImage(source: ImageSource.camera).then((value) {
                     if (value != '') {
                       imageCropperView(value, context).then((value) {
-                        context.router.push(BillScreenRoute(path: value));
+                        context.router.push(
+                          BillScreenRoute(path: value),
+                        );
                       });
                     }
                   });
@@ -60,7 +62,9 @@ class _ScanScreenState extends State<ScanScreen> {
               child: const Text('Считать без сканерa',
                   style: TextStyle(color: Colors.white)),
               onPressed: () {
-                context.router.push(const BillScreenWithOutScanRoute());
+                context.router.push(
+                  const BillScreenWithOutScanRoute(),
+                );
               },
             ),
           )
