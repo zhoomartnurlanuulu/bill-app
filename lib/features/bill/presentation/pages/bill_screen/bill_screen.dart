@@ -23,20 +23,7 @@ class _BillScreenState extends State<BillScreen> {
   bool isGeneral4 = true;
   bool isGeneral5 = true;
   bool isGeneral6 = true;
-  final TextEditingController controller = TextEditingController();
-  final TextEditingController controller1 = TextEditingController();
-  final TextEditingController controller2 = TextEditingController();
-  final TextEditingController controller3 = TextEditingController();
-  final TextEditingController controller4 = TextEditingController();
-  final TextEditingController controller5 = TextEditingController();
-  final TextEditingController controller6 = TextEditingController();
-  final TextEditingController priceController = TextEditingController();
-  final TextEditingController priceController1 = TextEditingController();
-  final TextEditingController priceController2 = TextEditingController();
-  final TextEditingController priceController3 = TextEditingController();
-  final TextEditingController priceController4 = TextEditingController();
-  final TextEditingController priceController5 = TextEditingController();
-  final TextEditingController priceController6 = TextEditingController();
+
   String _recognizedText = '';
 
   @override
@@ -106,43 +93,18 @@ class _BillScreenState extends State<BillScreen> {
                     ),
                     Row(
                       children: [
-                        SizedBox(
-                          height: 31,
-                          width: 155,
-                          child: TextFormField(
-                            cursorColor: Colors.black,
-                            style: const TextStyle(color: Colors.black),
-                            decoration: InputDecoration(
-                              fillColor: Colors.grey[200],
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                borderSide: BorderSide.none,
-                              ),
+                        Container(
+                            decoration: BoxDecoration(
+                              color: Colors.grey[200],
                             ),
-                            controller: controller,
-                          ),
-                        ),
+                            height: 31,
+                            width: 155,
+                            child: Center(
+                                child: Text(_recognizedText.substring(0, 10)))),
                         const SizedBox(
                           width: 16,
                         ),
-                        SizedBox(
-                          width: 70,
-                          height: 31,
-                          child: TextFormField(
-                            keyboardType: TextInputType.number,
-                            style: const TextStyle(color: Colors.black),
-                            decoration: InputDecoration(
-                              fillColor: Colors.grey[200],
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                            controller: priceController,
-                          ),
-                        ),
+                        const SizedBox(width: 70, height: 31, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
@@ -165,39 +127,11 @@ class _BillScreenState extends State<BillScreen> {
                     ),
                     Row(
                       children: [
-                        SizedBox(
-                          height: 31,
-                          width: 155,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            controller: controller1,
-                            decoration: InputDecoration(
-                                fillColor: Colors.grey[200],
-                                filled: true,
-                                border: OutlineInputBorder(
-                                    borderSide: BorderSide.none,
-                                    borderRadius: BorderRadius.circular(6))),
-                          ),
-                        ),
+                        const SizedBox(height: 31, width: 155, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
-                        SizedBox(
-                          width: 70,
-                          height: 31,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            decoration: InputDecoration(
-                              fillColor: Colors.grey[200],
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                            controller: priceController1,
-                          ),
-                        ),
+                        const SizedBox(width: 70, height: 31, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
@@ -220,41 +154,11 @@ class _BillScreenState extends State<BillScreen> {
                     ),
                     Row(
                       children: [
-                        SizedBox(
-                          height: 31,
-                          width: 155,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            controller: controller2,
-                            decoration: InputDecoration(
-                              fillColor: Colors.grey[200],
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                          ),
-                        ),
+                        const SizedBox(height: 31, width: 155, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
-                        SizedBox(
-                          width: 70,
-                          height: 31,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            decoration: InputDecoration(
-                              fillColor: Colors.grey[200],
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                            controller: priceController2,
-                          ),
-                        ),
+                        const SizedBox(width: 70, height: 31, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
@@ -277,39 +181,12 @@ class _BillScreenState extends State<BillScreen> {
                     ),
                     Row(
                       children: [
-                        SizedBox(
-                          height: 31,
-                          width: 155,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            controller: controller3,
-                            decoration: InputDecoration(
-                                fillColor: Colors.grey[200],
-                                filled: true,
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(6),
-                                    borderSide: BorderSide.none)),
-                          ),
-                        ),
+                        const SizedBox(height: 31, width: 155, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
-                        SizedBox(
-                          width: 70,
-                          height: 31,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            decoration: InputDecoration(
-                              fillColor: Colors.grey[200],
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                            controller: priceController3,
-                          ),
-                        ),
+                        const SizedBox(
+                            width: 70, height: 31, child: Text('data')),
                         const SizedBox(
                           width: 16,
                         ),
@@ -332,39 +209,11 @@ class _BillScreenState extends State<BillScreen> {
                     ),
                     Row(
                       children: [
-                        SizedBox(
-                          height: 31,
-                          width: 155,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            controller: controller4,
-                            decoration: InputDecoration(
-                                fillColor: Colors.grey[200],
-                                filled: true,
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(6),
-                                    borderSide: BorderSide.none)),
-                          ),
-                        ),
+                        const SizedBox(height: 31, width: 155, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
-                        SizedBox(
-                          width: 70,
-                          height: 31,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            decoration: InputDecoration(
-                              fillColor: Colors.grey[200],
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                            controller: priceController4,
-                          ),
-                        ),
+                        const SizedBox(width: 70, height: 31, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
@@ -387,39 +236,12 @@ class _BillScreenState extends State<BillScreen> {
                     ),
                     Row(
                       children: [
-                        SizedBox(
-                          height: 31,
-                          width: 155,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            controller: controller5,
-                            decoration: InputDecoration(
-                                fillColor: Colors.grey[200],
-                                filled: true,
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(6),
-                                    borderSide: BorderSide.none)),
-                          ),
-                        ),
+                        const SizedBox(
+                            height: 31, width: 155, child: Text('data')),
                         const SizedBox(
                           width: 16,
                         ),
-                        SizedBox(
-                          width: 70,
-                          height: 31,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            decoration: InputDecoration(
-                              fillColor: Colors.grey[200],
-                              filled: true,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(6),
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                            controller: priceController5,
-                          ),
-                        ),
+                        const SizedBox(width: 70, height: 31, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
@@ -442,36 +264,12 @@ class _BillScreenState extends State<BillScreen> {
                     ),
                     Row(
                       children: [
-                        SizedBox(
-                          height: 31,
-                          width: 155,
-                          child: TextFormField(
-                            controller: controller6,
-                            decoration: InputDecoration(
-                                fillColor: Colors.grey[200],
-                                filled: true,
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(6),
-                                    borderSide: BorderSide.none)),
-                          ),
-                        ),
+                        const SizedBox(
+                            height: 31, width: 155, child: Text('data')),
                         const SizedBox(
                           width: 16,
                         ),
-                        SizedBox(
-                          width: 70,
-                          height: 31,
-                          child: TextFormField(
-                            style: const TextStyle(color: Colors.black),
-                            controller: priceController6,
-                            decoration: InputDecoration(
-                                fillColor: Colors.grey[200],
-                                filled: true,
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(6),
-                                    borderSide: BorderSide.none)),
-                          ),
-                        ),
+                        const SizedBox(width: 70, height: 31, child: Text('')),
                         const SizedBox(
                           width: 16,
                         ),
@@ -558,20 +356,6 @@ class _BillScreenState extends State<BillScreen> {
   void processImage() async {
     _recognizedText =
         await FlutterTesseractOcr.extractText(widget.path, language: 'rus');
-    controller.text = _recognizedText;
-    controller1.text = _recognizedText;
-    controller2.text = _recognizedText;
-    controller3.text = _recognizedText;
-    controller4.text = _recognizedText;
-    controller5.text = _recognizedText;
-    controller6.text = _recognizedText;
-    priceController.text = _recognizedText;
-    priceController1.text = _recognizedText;
-    priceController2.text = _recognizedText;
-    priceController3.text = _recognizedText;
-    priceController4.text = _recognizedText;
-    priceController5.text = _recognizedText;
-    priceController6.text = _recognizedText;
 
     setState(() {
       isBusy = true;
