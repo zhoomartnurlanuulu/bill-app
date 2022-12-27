@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:billapp/configs/routers/router.gr.dart';
-import 'package:billapp/features/bill/presentation/pages/scan_screen/widgets/image_crooper_class.dart';
-import 'package:billapp/features/bill/presentation/pages/scan_screen/widgets/image_picker_modal.dart';
+import 'package:billapp/features/main/presentation/pages/scan_screen/widgets/image_crooper_class.dart';
+import 'package:billapp/features/main/presentation/pages/scan_screen/widgets/image_picker_modal.dart';
 import 'package:flutter/material.dart';
 
 import 'package:image_picker/image_picker.dart';

@@ -110,6 +110,7 @@ class _BillScreenState extends State<BillScreen> {
                           height: 31,
                           width: 155,
                           child: TextFormField(
+                            cursorColor: Colors.black,
                             style: const TextStyle(color: Colors.black),
                             decoration: InputDecoration(
                               fillColor: Colors.grey[200],
@@ -551,7 +552,8 @@ class _BillScreenState extends State<BillScreen> {
     );
   }
 
-  /// process Image это и есть text recognizer он способен распознать кириллицу
+  /// process Image это и есть text recognizer способен распозновать кириллицу
+  /// if you want recognize cyrillic, Flutter_tesseract_ocr its good choise
 
   void processImage() async {
     _recognizedText =

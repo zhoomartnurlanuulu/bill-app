@@ -18,12 +18,12 @@ import '../../features/bill/presentation/pages/bill_screen/bill_screen.dart'
     as _i2;
 import '../../features/bill/presentation/pages/bill_screen_2/bill_screen_without_scan.dart'
     as _i5;
-import '../../features/bill/presentation/pages/main_screen/main_screen.dart'
+import '../../features/main/presentation/pages/main_screen/main_screen.dart'
     as _i1;
-import '../../features/bill/presentation/pages/result_screen/result_screen.dart'
-    as _i4;
-import '../../features/bill/presentation/pages/scan_screen/scan_screen.dart'
+import '../../features/main/presentation/pages/scan_screen/scan_screen.dart'
     as _i3;
+import '../../features/result/presentation/pages/result_screen/result_screen.dart'
+    as _i4;
 
 class AppRouter extends _i6.RootStackRouter {
   AppRouter([_i7.GlobalKey<_i7.NavigatorState>? navigatorKey])

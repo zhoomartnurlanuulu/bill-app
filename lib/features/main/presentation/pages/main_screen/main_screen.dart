@@ -1,4 +1,4 @@
-import 'package:billapp/features/bill/presentation/pages/main_screen/widgets/custom_list_title.dart';
+import 'package:billapp/features/main/presentation/pages/main_screen/widgets/custom_list_title.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
